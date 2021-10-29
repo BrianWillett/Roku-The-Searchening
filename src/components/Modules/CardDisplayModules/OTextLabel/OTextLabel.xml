@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="OTextLabel" extends="Group">
+    <script type="text/brightscript" uri="OTextLabel.brs" />
+    <interface>
+        <field id="theText" type="string" alias="label.text" />
+        <field id="theTranslation" type="array" alias="label.translation" />
+        <field id="theFont" type="string" alias="fontType.uri" />
+    </interface>
+    <children>
+        <Label id="label" wrap="true" width="640" horizAlign="left" vertAlign="top" color="#000000" lineSpacing="2">
+            <Font id="fontType" role="font" size="25" />
+        </Label>
+    </children>
+</component>

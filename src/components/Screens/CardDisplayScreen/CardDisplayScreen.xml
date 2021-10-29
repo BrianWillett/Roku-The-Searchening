@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CardDisplayScreen" extends="Group">
+    <script type="text/brightscript" uri="CardDisplayScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+<interface>
+    <function name="onOpen" />
+    <!-- Images -->
+    <field id="frontUri" type="string" alias="front.Uri" />
+    <field id="frontVis" type="boolean" alias="front.visible" />
+    <field id="backUri" type="string" alias="back.Uri" />.
+    <field id="backVis" type="boolean" alias="back.visible" />
+    <!-- Primary Side Text -->
+    <field id="cName" type="string" alias="cardbox.cName" />
+    <field id="isFor" type="string" alias="cardBox.isFor" />
+    <field id="cMana" type="string" alias="cardbox.cMana" />
+    <field id="cType" type="string" alias="cardbox.cType" />
+    <field id="cPT" type="string" alias="cardbox.cPT" />
+    <field id="cArt" type="string" alias="cardbox.cArt" />
+    <field id="cText" type="string" alias="cardbox.cText" />
+    <field id="cFText" type="string" alias="cardbox.cFText" />
+    <field id="formats" type="assocArray" alias="cardbox.formats" />
+    <!-- <field id="oracleCentering" type="string" alias="cardbox.oracleCentering" /> -->
+    <field id="ptVis" type="string" alias="cardbox.ptVis" />
+    <field id="isRL" type="string" alias="cardbox.isRL"/>
+    <!-- Secondary Side Text -->
+    <field id="cBox2Vis" type="boolean" alias="cardbox2.visible" />
+    <field id="isFor2" type="string" alias="cardBox2.isFor" />
+    <field id="cName2" type="string" alias="cardbox2.cName" />
+    <field id="cMana2" type="string" alias="cardbox2.cMana" />
+    <field id="cType2" type="string" alias="cardbox2.cType" />
+    <field id="cPT2" type="string" alias="cardbox2.cPT" />
+    <field id="cArt2" type="string" alias="cardbox2.cArt" />
+    <field id="cText2" type="string" alias="cardbox2.cText" />
+    <field id="cFText2" type="string" alias="cardbox2.cFText" />
+    <field id="formats2" type="assocArray" alias="cardbox2.formats" />
+    <!-- <field id="oracleCentering2" type="string" alias="cardbox2.oracleCentering" /> -->
+    <field id="ptVis2" type="string" alias="cardbox2.ptVis" />
+    <field id="isRL2" type="string" alias="cardbox2.isRL"/>
+    <!-- Set Languages and Pricing Area -->
+    <field id="alternates" type="array" alias="setLangPrints.alternates" />
+    <field id="displayedSet" type="string" alias="setLangPrints.displayedSet" />
+    <field id="langDisplay" type="string" alias="setLangPrints.langDisplay" />
+    <field id="collectorNum" type="string" alias="setLangPrints.collectorNum" />
+    <field id="mtgSet" type="string" alias="setLangPrints.mtgSet" />
+    <field id="setAbbrev" type="string" alias="setLangPrints.setAbbrev" />
+    <field id="setColNumLine" type="string" alias="setLangPrints.setColNumLine" />
+    <field id="setImg" type="string" alias="setLangPrints.setImg" />
+    <field id="langs" type="array" alias="setLangPrints.langs" />
+</interface>
+<children>
+    <Group id="MasterGroup" translation="[-55,-70]" >
+        <CardBox id="cardBox2" />
+        <CardBox id="cardBox" />
+        <Poster id="back" translation="[100,100]" width="500" height="700" visible="true"  />
+        <Poster id="front" translation="[100,100]" width="500" height="700" visible="true" />
+        <SetLangPrints id="setLangPrints" />
+        <!-- Card Image Animations -->
+        <Animation id="fr" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [0, 1], [0, 1] ]"    fieldToInterp="front.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [100, 100], [350, 100], [350, 100] ]"    fieldToInterp="front.translation" />
+            <Vector2DFieldInterpolator    key= "[1, 0.5, 0]"    keyValue= "[ [0, 1], [0, 1], [0, 1] ]"    fieldToInterp="back.scale" />
+        </Animation >
+        <Animation id="bk" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [0, 1], [0, 1], [1, 1] ]"    fieldToInterp="back.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [350, 100], [350, 100], [100, 100] ]"    fieldToInterp="back.translation" />
+        </Animation>
+
+        <Animation id="fr2" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [0, 1], [0, 1] ]"    fieldToInterp="back.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [100, 100], [350, 100], [350, 100] ]"    fieldToInterp="back.translation" />
+            <Vector2DFieldInterpolator    key= "[1, 0.5, 0]"    keyValue= "[ [0, 1], [0, 1], [0, 1] ]"    fieldToInterp="front.scale" />
+        </Animation >
+        <Animation id="bk2" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [0, 1], [0, 1], [1, 1] ]"    fieldToInterp="front.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [350, 100], [350, 100], [100, 100] ]"    fieldToInterp="front.translation" />
+        </Animation>
+        <!-- Details Box Animations -->
+        <Animation id="d1" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [0, 1], [0, 1] ]"    fieldToInterp="cardBox.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [0, 0], [950, 0], [950, 0] ]"    fieldToInterp="cardBox.translation" />
+            <Vector2DFieldInterpolator    key= "[1, 0.5, 0]"    keyValue= "[ [0, 1], [0, 1], [0, 1] ]"    fieldToInterp="cardBox2.scale" />
+        </Animation >
+        <Animation id="d2" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [0, 1], [0, 1], [1, 1] ]"    fieldToInterp="cardBox2.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [950, 0], [950, 0], [0, 0] ]"    fieldToInterp="cardBox2.translation" />
+        </Animation>
+
+        <Animation id="d3" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [1, 1], [0, 1], [0, 1] ]"    fieldToInterp="cardBox2.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [0, 0], [950, 0], [950, 0] ]"    fieldToInterp="cardBox2.translation" />
+            <Vector2DFieldInterpolator    key= "[1, 0.5, 0]"    keyValue= "[ [0, 1], [0, 1], [0, 1] ]"    fieldToInterp="cardBox.scale" />
+        </Animation >
+        <Animation id="d4" duration="1" repeat="false" easeFunction="linear" >
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [0, 1], [0, 1], [1, 1] ]"    fieldToInterp="cardBox.scale" />
+            <Vector2DFieldInterpolator    key= "[0, 0.5, 1]"    keyValue= "[ [950, 0], [950, 0], [0, 0] ]"    fieldToInterp="cardBox.translation" />
+        </Animation>
+        <CustomButton id="flip" width="200" height="75" translation="[250,800]" visible="false" unfocusedColor="#770077" focusedColor="#FF00FF" text="Flip"/>
+    </Group>
+</children>
+</component>

@@ -1,0 +1,14 @@
+{
+  "name": "searchening",
+  "version": "1.0.0",
+  "description": "Self-directed Roku learning to search for MTG cards",
+  "scripts": {
+    "build": "bsc",
+    "package": "roku --package --stage main -O out -V"
+  },
+  "author": "Brian Willett",
+  "license": "ISC",
+  "devDependencies": {
+    "brighterscript": "^0.39.4"
+  }
+}

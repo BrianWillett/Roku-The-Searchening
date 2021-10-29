@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="FormatsButton" extends="Group">
+    <script type="text/brightscript" uri="FormatsButton.brs" />
+<interface>
+    <field id="btnBlend" type="color" alias="button.blendColor" />
+    <field id="lText" type="string" alias="label.text" />
+    <field id="text" type="string" alias="buttonLabel.text" />
+</interface>
+<children>
+    <CustomButton id="button" width="175" height="55" />
+    <Label id="buttonLabel" width="175" height="55" horizAlign="center" vertAlign="center" >
+        <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+    <Label id="label" width="140" height="55" vertAlign="center" translation="[175,0]" color="#000000">
+      <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+</children>
+</component>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LanguageButton" extends="Group">
+    <script type="text/brightscript" uri="LanguageButton.brs" />
+<interface>
+    <field id="langText" type="string" alias="langLabel.text" />
+    <field id="schVis" type="string" alias="sch.visible" />
+    <field id="postColor" type="string" onChange="changeBGColor" />
+    <field id="url" type="string" alias="langUrl.text" />
+</interface>
+<children>
+    <Poster id="English" uri="pkg:/assets/images/allRound.9.png" width="50" height="50" blendColor="#000019" />
+    <Label id="langLabel" color="#FFFFFFFF" width="50" height="50" vertAlign="center" horizAlign="center">
+        <Font role="font" size="20" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+    <Poster id="sch" visible="false" uri="pkg:/assets/images/simplifiedChinese.9.png" width="50" height="50" />
+    <Label id="langUrl" width="1" height="1" visible="false" wrap="false"/>
+</children>
+</component>

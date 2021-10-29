@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="PricingArea" extends="Group">
+    <script type="text/brightscript" uri="PricingArea.brs" />
+<interface>
+    <field id="alternates" type="array" onChange="addPrintRows" />
+    <field id="displayedSet" type="string" />
+    <field id="collectorNum" type="string" />
+    <field id="langDisplay" type="string" />
+    <field id="isInFocus" type="node" />
+</interface>
+<children>
+    <DetailsBox id="titleBar" translation="[0, 0]" dHeight="60" dWidth="650" separatorVis="false" blendColor="#000019"/>
+    <LayoutGroup id="titleLayout" translation="[15, 15]" layoutDirection="horiz" itemSpacings="[10,30,5]" >
+        <Label id="prints" text="PRINTS" color="#FFFFFF" width="335">
+            <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+        </Label>
+        <Label id="usd" text="USD" color="#FFFFFF" width="100ß">
+            <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+        </Label>
+        <Label id="eur" text="EUR" color="#FFFFFF" width="95">
+            <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+        </Label>
+        <Label id="tix" text="TIX" color="#FFFFFF" width="100">
+            <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+        </Label>
+    </LayoutGroup>
+    <Group id="alternatePrints" />
+    <DetailsBox id="ViewAllPrints" translation="[0, 180]" dHeight="60" dWidth="650" blendColor="#FFFFFF"/>
+    <Label id="ViewAll" text="View all prints ->" color="#000019" translation="[10, 195]" >
+        <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Light.ttf" />
+    </Label>
+    <DetailsBox id="bottomBar" translation="[0, 240]" dHeight="5" dWidth="650" separatorVis="false" blendColor="#000019"/>
+</children>
+</component>

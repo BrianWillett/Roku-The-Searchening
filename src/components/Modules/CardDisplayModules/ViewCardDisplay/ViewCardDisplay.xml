@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ViewCardDisplay" extends="Group">
+    <script type="text/brightscript" uri="ViewCardDisplay.brs" />
+<interface>
+    <field id="itemContent" type="node" onChange="displayCard" />
+</interface>
+<children>
+    <LayoutGroup id="group" layoutDirection="vert" itemSpacings="[50]" >
+        <Poster id="viewAllCardImage" width="500" height="700" />
+        <Label id="set" color="#FFFFFF" width="500" horizAlign="center">
+            <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+        </Label>
+    </LayoutGroup>
+</children>
+
+</component>

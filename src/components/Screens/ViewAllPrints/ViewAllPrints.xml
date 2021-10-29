@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ViewAllPrints" extends="Group">
+    <script type="text/brightscript" uri="ViewAllPrints.brs" />
+<interface>
+    <function name="onOpen" />
+</interface>
+<children>
+    <MarkupGrid id ="allCardsRowList" itemComponentName="ViewCardDisplay" translation="[100,100]" itemSize="[500,700]" columnWidths="[500]" />
+</children>
+</component>

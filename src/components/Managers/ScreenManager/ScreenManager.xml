@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ScreenManager" extends="Node">
+    <script type="text/brightscript" uri="ScreenManager.brs" />
+    <interface>
+        <function name="goToScreen" />
+        <function name="goBack" />
+        <function name="fetchLastScreen" />
+        <function name="fetchCurrentScreen" />
+    </interface>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ViewSetDisplay" extends="Group">
+    <script type="text/brightscript" uri="ViewSetDisplay.brs" />
+<interface>
+    <field id="itemContent" type="node" onChange="displayCard" />
+</interface>
+<children>
+    <LayoutGroup id="group" layoutDirection="vert" itemSpacings="[20]" >
+        <Poster id="viewAllCardImage" width="350" height="450" loadingBitmapUri="pkg:/assets/images/magic_card_back_loading.png" failedBitmapUri="pkg:/assets/images/magic_card_back.png" />
+        <Label id="title" color="#FFFFFF" width="350" horizAlign="center">
+            <Font role="font" size="23" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+        </Label>
+    </LayoutGroup>
+</children>
+
+</component>

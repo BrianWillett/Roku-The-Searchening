@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="Languages" extends="Group">
+    <script type="text/brightscript" uri="Languages.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+<interface>
+    <field id="langs" type="array" onChange="populateLangs" />
+    <field id="isInFocus" type="node" />
+    <field id="lastHighlighted" type="node" />
+    <field id="savedList" type="array" onChange="saveList" />
+</interface>
+<children>
+    <LayoutGroup id="languages" itemSpacings="[10]" layoutDirection="horiz" />
+</children>
+</component>

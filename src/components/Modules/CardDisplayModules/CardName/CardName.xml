@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CardName" extends="Group">
+    <script type="text/brightscript" uri="CardName.brs" />
+<interface>
+    <field id="namePlateHeight" type="float" onChange="ChangeHeight" />
+    <field id="namePlateWidth" type="float" onChange="changeWidth" />
+    <field id="namePlateBlendColor" type="string" alias="topNameplate.blendColor" />
+    <field id="separatorBlendColor" type="string" alias="separator.blendColor" />
+    <field id="separatorVis" type="string" alias="separator.visible" />
+</interface>
+<children>
+        <Poster id="topNameplate" uri="pkg:/assets/images/onlyTopRounded.9.png" height="100" width="700"/>
+        <LineSeparator id="separator"/>
+</children>
+</component>

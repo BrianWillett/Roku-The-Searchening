@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ViewSet" extends="Group">
+    <script type="text/brightscript" uri="ViewSet.brs" />
+<interface>
+    <function name="onOpen" />
+</interface>
+<children>
+    <MarkupGrid id ="allCardsRowList" itemComponentName="ViewSetDisplay" translation="[125,40]" itemSize="[350,450]" columnWidths="[350]" />
+</children>
+</component>

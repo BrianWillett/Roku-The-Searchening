@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CustomButton" extends="Poster">
+  <script type="text/brightscript" uri="CustomButton.brs" />
+  <interface>
+    <field id="text" type="string" alias="buttonLabel.text" />
+    <field id="textFont" type="node" alias="buttonLabel.font" />
+    <field id="color" type="color" alias="buttonLabel.color" />
+    <field id="focusedColor" type="color" value="#FFFFFF" />
+    <field id="unfocusedColor" type="color" value="#0000000"/>
+    <field id="buttonSelected" type="node" alwaysNotify="true" />
+  </interface>
+  <children>
+    <Label id="buttonLabel" />
+  </children>
+</component>

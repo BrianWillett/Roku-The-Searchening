@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="PricingRow" extends="Group">
+    <script type="text/brightscript" uri="PricingRow.brs" />
+<interface>
+    <field id="dHeight" type="float" alias="rowBG.dHeight" />
+    <field id="dWidth" type="float" alias="rowBG.dWidth" />
+    <field id="dBlend" type="string" alias="rowBG.blendColor" />
+    <field id="dTrans" type="array" alias="rowBG.translation" />
+    <field id="rarity" type="string" />
+    <field id="lTrans" type="array" onChange="updateTranslation" />
+    <field id="lText" type="string" alias="setName.text" />
+    <field id="lSpace" type="integer" alias="setName.lineSpacing" />
+    <field id="usdPrice" type="string" alias="usdPrice.text" />
+    <field id="eurPrice" type="string" alias="eurPrice.text" />
+    <field id="tix" type="string" alias="tix.text" />
+    <field id="setCo" type="string" alias="setCode.text" />
+    <field id="collectNum" type="string" alias="colNum.text" />
+    <field id="idNum" type="string" alias="idNum.text" />
+    <field id="asteriskVis" type="string" alias="asterisk.visible" />
+
+</interface>
+<children>
+    <DetailsBox id="rowBG"/>
+    <Label id="setCode" visible="false" />
+    <Label id="colNum" visible="false" />
+    <Label id="idNum" visible="false" />
+    <LayoutGroup id="labelLayout" layoutDirection="horiz" itemSpacings="[2,0,-7]" >
+    <Label id="setName" color="#000019" width="310" wrap="true">
+        <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+    <Label id="usdPrice" color="#168b91" width="120" >
+        <Font role="font" size="23" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+    <Label id="eurPrice" color="#e266ed" width="120" horizAlign="center">
+        <Font role="font" size="23" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+    <Label id="tix" color="#ff5100" width="70" horizAlign="right">
+        <Font role="font" size="23" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+    </Label>
+</LayoutGroup>
+<Poster id="rarityCircle" uri="pkg:/assets/images/symbols/png/circle.png" />
+<Poster id="rarityStar" />
+<Label id="asterisk" color="#168b91" text="*">
+    <Font role="font" size="40" uri="pkg:/assets/fonts/Lato-Regular.ttf" />
+</Label>
+</children>
+</component>

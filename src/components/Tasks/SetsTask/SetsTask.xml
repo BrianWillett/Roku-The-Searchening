@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="SetsTask" extends="CoreTask">
+    <script type="text/brightscript" uri="SetsTask.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="SetsTask.AllSets.brs" />
+    <script type="text/brightscript" uri="SetsTask.SpecSet.brs" />
+    <script type="text/brightscript" uri="SetsTask.MoreResults.brs" />
+</component>

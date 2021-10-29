@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="SetLangPrints" extends="Group">
+    <script type="text/brightscript" uri="SetLangPrints.brs" />
+<interface>
+    <field id="alternates" type="assocArray" alias="pricingArea.alternates" />
+    <field id="displayedSet" type="string" alias="pricingArea.displayedSet" />
+    <field id="collectorNum" type="string" alias="pricingArea.collectorNum" />
+    <field id="langDisplay" type="string" alias="pricingArea.langDisplay" />
+    <field id="mtgSet" type="string" alias="setInfo.mtgSet" />
+    <field id="setAbbrev" type="string" alias="setInfo.setAbbrev" />
+    <field id="setColNumLine" type="string" alias="setInfo.setColNumLine" />
+    <field id="setImg" type="string" alias="setInfo.setImg" />
+    <field id="langs" type="array" alias="languages.langs" />
+</interface>
+<children>
+    <SetInfo id="setInfo" translation="[1280,101]" />
+    <Languages id="languages" translation="[1279, 261]" />
+    <PricingArea id="pricingArea" translation="[1280, 321]"/>
+</children>
+</component>

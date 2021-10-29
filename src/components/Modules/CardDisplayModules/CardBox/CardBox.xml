@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CardBox" extends="Group">
+    <script type="text/brightscript" uri="CardBox.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs"/>
+<interface>
+    <field id="cName" type="string" alias="name.text" />
+    <field id="isFor" type="string" alias="manaCost.isFor" />
+    <field id="cMana" type="string" alias="manaCost.mana" />
+    <field id="cType" type="string" alias="type.text" />
+    <field id="cPT" type="string" alias="pT.text" />
+    <field id="cArt" type="string" alias="art.text" />
+    <field id="cText" type="string" onChange="handleOracleText" />
+    <field id="formats" type="assocArray" alias="legalities.formats" />
+    <field id="cFText" type="string" />
+    <field id="ptVis" type="string" onChange="hidePT" />
+    <field id="isRL" type="string" onChange="hidePT"/>
+</interface>
+<children>
+        <CardName id="topBG" namePlateWidth="696" namePlateHeight="100" namePlateBlendColor="#000000" separatorVis="false" translation="[572,101]"/>
+        <CardName id="topNamePlate" namePlateWidth="700" namePlateHeight="100" translation="[571,105]"/>
+        <LayoutGroup id="cardTitleGroup" translation="[615,135]" layoutDirection="horiz" itemSpacings="[10]" >
+            <Label id="name" color="#000000">
+                <Font role="font" size="35" uri="pkg:/assets/fonts/Lato-Bold.ttf" />
+            </Label>
+            <ManaCost id="manaCost" />
+        </LayoutGroup>
+        <DetailsBox id="typing" dWidth="682" dHeight="75" translation="[580,197]" />
+        <Label id="type" color="#000000" translation="[615,215]" >
+            <Font role="font" size="30" uri="pkg:/assets/fonts/Lato-Light.ttf" />
+        </Label>
+        <DetailsBox id="cardText" dWidth="682" dHeight="250" translation="[580,272]" />
+        <Group id="oText" translation="[615,269]" />
+        <Label id="fText" width="640" height="255" wrap="true" horizAlign="left" vertAlign="bottom" color="#000000" translation="[615,267]" >
+            <Font role="font" size="23" uri="pkg:/assets/fonts/Lato-Italic.ttf" />
+        </Label>
+        <DetailsBox id="powerTough" dWidth="682" dHeight="75" translation="[580,522]" />
+        <Label id="pT" color="#000000" translation="[615,540]" >
+            <Font role="font" size="30" uri="pkg:/assets/fonts/Lato-Light.ttf" />
+        </Label>
+        <DetailsBox id="artist" dWidth="682" dHeight="75" translation="[580,597]" />
+        <Label id="art" color="#000000" translation="[615,617]" >
+            <Font role="font" size="30" uri="pkg:/assets/fonts/Lato-Light.ttf" />
+        </Label>
+        <DetailsBox id="reservedList" dWidth="682" dHeight="75" translation="[580,677]" />
+        <Label id="resList" color="#000000" text="Part of the Reserved List" translation="[615,635]" >
+            <Font role="font" size="30" uri="pkg:/assets/fonts/Lato-Light.ttf" />
+        </Label>
+        <LegalitiesDetails id="bottomBG" dWidth="679" dHeight="290" translation="[581,752]" blendColor="#000000" />
+        <LegalitiesDetails id="legalities" dWidth="682" dHeight="290" translation="[580,672]" />
+        <Group id="manaSymbols" translation="[611,269]" />
+        <Label id="test" width="100" translation="[650,540]" color="#000">
+            <Font role="font" size="25" uri="pkg:/assets/fonts/Lato-Light.ttf" />
+        </Label>
+</children>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LineSeparator" extends="Group">
+    <script type="text/brightscript" uri="LineSeparator.brs" />
+<interface>
+    <field id="lWidth" type="float" alias="separator.width" />
+    <field id="blendColor" type="string" alias="separator.blendColor" />
+    <field id="lTranslation" type="string" alias="separator.translation" />
+</interface>
+<children>
+    <Poster id="separator" uri="pkg:/assets/images/allSquare.9.png" height="2" blendColor="#8a8a8a"/>
+</children>
+</component>

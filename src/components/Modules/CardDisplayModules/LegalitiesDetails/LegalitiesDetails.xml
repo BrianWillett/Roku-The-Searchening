@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="LegalitiesDetails" extends="Group">
+    <script type="text/brightscript" uri="LegalitiesDetails.brs" />
+<interface>
+    <field id="dHeight" type="float" alias="legals.dHeight" />
+    <field id="dWidth" type="float" alias="legals.dWidth" />
+    <field id="blendColor" type="string" alias="legals.blendColor" />
+    <field id="formats" type="assocArray" onChange="handleFormats" />
+</interface>
+<children>
+    <DetailsBox id="legals" dUri="pkg:/assets/images/bottomRound.9.png" separatorVis="false" />
+    <LayoutGroup id="outerGroup" layoutDirection="horiz" itemSpacings="[-10]" translation="[40,0]" >
+        <LayoutGroup id="leftImages" layoutDirection="vert" itemSpacings="[0]">
+            <FormatsButton id="standard" lText="Standard" />
+            <FormatsButton id="pioneer" lText="Pioneer" />
+            <FormatsButton id="modern" lText="Modern" />
+            <FormatsButton id="legacy" lText="Legacy" />
+            <FormatsButton id="vintage" lText="Vintage" />
+        </LayoutGroup>
+        <LayoutGroup id="rightImages" layoutDirection="vert" itemSpacings="[0]">
+            <FormatsButton id="Brawl" lText="Brawl" />
+            <FormatsButton id="Historic" lText="Historic" />
+            <FormatsButton id="Pauper" lText="Pauper" />
+            <FormatsButton id="Penny" lText="Penny" />
+            <FormatsButton id="Commander" lText="Commander" />
+        </LayoutGroup>
+    </LayoutGroup>
+</children>
+</component>

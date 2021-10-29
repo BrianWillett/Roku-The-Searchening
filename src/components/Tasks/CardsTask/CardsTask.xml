@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="CardsTask" extends="CoreTask">
+    <script type="text/brightscript" uri="CardsTask.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+    <script type="text/brightscript" uri="CardsTask.CardSearch.brs" />
+    <script type="text/brightscript" uri="CardsTask.NamedSearch.brs" />
+    <script type="text/brightscript" uri="CardsTask.AutoComplete.brs" />
+    <script type="text/brightscript" uri="../SetsTask/SetsTask.MoreResults.brs" />
+</component>

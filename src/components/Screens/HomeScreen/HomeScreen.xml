@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="HomeScreen" extends="Group">
+    <script type="text/brightscript" uri="HomeScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/utils.brs" />
+<interface>
+    <function name="onOpen" />
+</interface>
+<children>
+    <PanelSet id="panelSet" >
+            <LayoutGroup id="layout" layoutDirection="horiz" itemSpacings="[100]" visible="false" >
+                <MiniKeyboard id="searchKeyboard" />
+                <LabelList id="searchResults">
+                    <ContentNode id="cards" role="content" />
+                </LabelList>
+            </LayoutGroup>
+            <LabelList id="cardSetList"  translation="[200,200]">
+                <ContentNode id="cardSetTop" role="content">
+                    <ContentNode title="Card Search" description="Card Search" />
+                    <ContentNode title="Set Search" description="Set Search" />
+                </ContentNode>
+            </LabelList>
+    </PanelSet>
+
+</children>
+</component>

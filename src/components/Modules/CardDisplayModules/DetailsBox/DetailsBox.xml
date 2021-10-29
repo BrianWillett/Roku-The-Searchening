@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="DetailsBox" extends="Group">
+    <script type="text/brightscript" uri="DetailsBox.brs" />
+<interface>
+    <field id="dHeight" type="float" onChange="ChangeHeight" />
+    <field id="dWidth" type="float" onChange="changeWidth" />
+    <field id="blendColor" type="string" alias="bgSquare.blendColor" />
+    <field id="separatorBlendColor" type="string" alias="bgSquare.blendColor" />
+    <field id="separatorVis" type="string" alias="separator.visible" />
+    <field id="dUri" type="string" alias="bgSquare.uri" />
+</interface>
+<children>
+        <Poster id="bgSquare" uri="pkg:/assets/images/allSquare.9.png"/>
+        <LineSeparator id="separator" visible="true" />
+</children>
+</component>

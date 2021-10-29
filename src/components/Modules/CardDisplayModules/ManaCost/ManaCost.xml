@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="ManaCost" extends="Group">
+    <script type="text/brightscript" uri="ManaCost.brs" />
+<interface>
+    <field id="mana" type="string" onChange="createMana" />
+    <field id="isFor" type="string" onChange="updateSize"/>
+</interface>
+<children>
+    <LayoutGroup id="manaCostGroup" layoutDirection="horiz" itemSpacings="[1]" />
+</children>
+</component>
