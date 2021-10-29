@@ -15,6 +15,32 @@
 - This is not something to be monetized.
 - This is not anything designed to compete with Scryfall for any reason.
 
+### Screenshot Demo
+#### This is the landing screen where you can search for a specific card or entire set
+<br/>
+    <img src="src/assets/images/screenshots/autoComplete.jpg" alt="Auto Complete Searching" width="700px" height="400" />
+<br/><br/>
+
+#### This is the main card viewing screen
+<br/>
+    <img src="src/assets/images/screenshots/cardView.jpg" alt="Card View" width="700px" height="400" />
+<br/><br/>
+
+#### Showing the card in a different language
+<br />
+    <img src="src/assets/images/screenshots/multilingual.jpg" alt="Another Language View" width="700px" height="400" />
+<br/><br/>
+
+#### The hardest thing to accomplish was a replacement effect like JavaScript would use for inserting icons.  You can see in this image that the displayed text with images woven in (the white box) actually comes in as pure text (the black box).  So I had to write an algorithm that would calculate the text symbol's placement and replace it with the appropriate mana symbol image.
+<br />
+    <img src="src/assets/images/screenshots/manaSymbols.png" alt="Another Language View" width="700px" height="400" />
+<br/><br/>
+
+#### This is how an entire set of cards looks loaded up
+<br />
+    <img src="src/assets/images/screenshots/setView.jpg" alt="Another Language View" width="700px" height="400" />
+<br/><br/>
+
 #### Known Issues to resolve:
 
 - When searching for basic lands the program can crash. This is due to the pulling in of all languages that the basic lands were printed in.
