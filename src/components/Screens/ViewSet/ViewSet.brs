@@ -105,13 +105,13 @@ sub onResultReceived(event)
         'set this value to true so that the cardlist updates instead of assuming its another set version of the currently displayed card
         m.global.newCard = true
         ' format the cards list back to what was passed in
-    data = {
-        cards: response.data,
-        linkedSet: m.set,
-        linkedColNum: m.colNum,
-        fullSet: m.cards
-    }
-    m.global.screenManager.callFunc("goToScreen", {type: "CardDisplayScreen", data: data })
+        data = {
+            cards: response.data,
+            linkedSet: m.set,
+            linkedColNum: m.colNum,
+            fullSet: m.cards
+        }
+        m.global.screenManager.callFunc("goToScreen", {type: "CardDisplayScreen", data: data })
     end if
 end sub
 
