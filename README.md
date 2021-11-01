@@ -45,7 +45,6 @@
 
 - When searching for basic lands the program can crash. This is due to the pulling in of all languages that the basic lands were printed in.
 - There are a lot of set symbols.  Some of them do not show up.  I correct them as I come across them.  Roku does not support svg's so I have to create each set symbol to be used then hook it up in the program.
-- There is currently a problem where if you search for a card, then use the set at the top of the page to search for the set, and select a different card, the same card originally searched for will show up
 - The navigation going between individual cards and sets, using the back button, can be wonky and throw an error
 - These can be tracked [here](https://github.com/BrianWillett/Roku-The-Searchening/issues "Bugs")
 
