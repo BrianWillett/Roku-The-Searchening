@@ -101,6 +101,9 @@ end sub
 sub onResultReceived(event)
     response = event.getData()
     if invalid <> response and invalid <> response.data
+        'Bug #3 - Selecting from Set List:
+        'set this value to true so that the cardlist updates instead of assuming its another set version of the currently displayed card
+        m.global.newCard = true
         ' format the cards list back to what was passed in
     data = {
         cards: response.data,
