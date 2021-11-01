@@ -1,7 +1,7 @@
 ## MTG: The Searchening (Roku Edition)
 
 
-#### This is built to run in VS Code with the [BrightScript Language][1] extension
+#### This is built with VS Code and the [BrightScript Language][1] extension
 [1]: https://marketplace.visualstudio.com/items?itemName=RokuCommunity.brightscript/ "BrightScript Extension"
 
 ### What it is:
